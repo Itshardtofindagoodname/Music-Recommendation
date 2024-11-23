@@ -28,7 +28,8 @@ test_data = [
     {"artist": "The Beatles", "song": "All I've Got To Do", "relevant": ["I'll Come Running"]},
     {"artist": "Guns N' Roses", "song": "Shadow Of Your Love", "relevant": ["Have You Seen Your Mother Baby", "Standing In The Shadow"]},
     {"artist": "ABBA", "song": "Ahe's My Kind Of Girl", "relevant": ["The Kind of Girl I Could Love", "What Kind of Girl"]},
-    {"artist": "Michael Jackson", "song": "Man In The Mirror", "relevant": ["Human"]},
+    {"artist": "Michael Jackson", "song": "Man In The Mirror", "relevant": ["Mirror, Mirror"]},
+    {"artist": "Ray Charles", "song": "Ellie my Love", "relevant": ["And You My Love"]},
 ]
 
 def evaluate_model(test_data, n=5):
@@ -48,7 +49,7 @@ def evaluate_model(test_data, n=5):
             ):
                 correct_recommendations += 1
                 break
-
+    
     precision = correct_recommendations / total_recommendations
     return precision
 
