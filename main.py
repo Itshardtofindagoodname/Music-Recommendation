@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 df = pd.read_csv('songdata.csv')
 df['text'] = df['text'].fillna('')
 
-vectorizer = TfidfVectorizer(stop_words='english') #Tf-IDF vectorizer -> token frequency and inverse document frequency
+vectorizer = TfidfVectorizer(stop_words='english')
 lyrics_vectors = vectorizer.fit_transform(df['text'])
 
 knn_model = NearestNeighbors(metric='cosine', algorithm='brute')
